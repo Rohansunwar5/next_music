@@ -15,6 +15,7 @@ function addVariablesForColors({ addBase, theme }: any) {
   });
 }
 
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -25,10 +26,17 @@ const config: Config = {
   theme: {
     extend: {
        animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
         shimmer: "shimmer 2s linear infinite",
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",

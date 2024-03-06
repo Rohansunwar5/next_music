@@ -2,3 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style for custom scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #718096 transparent;
+  overflow-y: scroll; /* Important: Ensure content scrolls vertically */
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #718096;
+  border-radius: 6px;
+  border: 2px solid transparent; /* Border color should match background */
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #4a5568;
+}
